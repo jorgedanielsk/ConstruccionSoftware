@@ -1,0 +1,372 @@
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    body {
+        background-color: #cccccc;
+    }
+}
+
+/* Contenedor principal del Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #020202d5;
+}
+
+/* Caja blanca del formulario */
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 28px;
+    border: 1px solid #000000;
+    box-shadow: 10px 14px 22px rgb(70, 70, 70);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-box h3 {
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* Estilos de los inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botón principal */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #004494;
+}
+
+/* --- ESTILOS DEL DASHBOARD DE RECEPCIÓN --- */
+.dashboard-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Alertas gigantes */
+.alerta-gigante {
+    padding: 50px 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    animation: aparecer 0.3s ease-in-out;
+}
+
+.alerta-gigante h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info-socio {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Colores de estado cromáticos */
+.alerta-verde {
+    background-color: #28a745;
+}
+
+.alerta-rojo {
+    background-color: #dc3545;
+}
+
+.alerta-amarillo {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.alerta-error {
+    background-color: #6c757d;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ESTILOS DEL FORMULARIO DE REGISTRO --- */
+.form-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.select-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.checkbox-group {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    color: #856404;
+    font-weight: bold;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+/* --- ESTILOS DE LA NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* --- ESTILOS DE LA CUADRÍCULA DE SOCIOS (DASHBOARD) --- */
+.lista-socios-seccion {
+    margin-top: 20px;
+}
+
+.lista-socios-seccion h3 {
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+.socios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-socio-mini {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 6px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-socio-mini h4 {
+    margin-bottom: 8px;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+.tarjeta-socio-mini p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+/* Colores en el borde izquierdo según estado para el encargado */
+.tarjeta-socio-mini.estatus-activo {
+    border-left-color: #28a745;
+    /* Verde */
+}
+
+.tarjeta-socio-mini.estatus-inactivo {
+    border-left-color: #dc3545;
+    /* Rojo */
+}
+
+/* --- NUEVOS ESTILOS PARA DÍAS RESTANTES Y ALERTAS ESTÁTICAS --- */
+
+/* Estilo por defecto en color gris */
+.dias-normales {
+    color: #777777;
+    margin-top: 8px;
+    font-size: 13px;
+    border-top: 1px dashed #ddd;
+    padding-top: 6px;
+}
+
+/* Diseño Estático de Alerta Temprana: Rellenado Rojo + Shadow Gigante */
+.tarjeta-socio-mini.tarjeta-urgente {
+    background-color: #dc3545 !important;
+    /* Rojo vibrante */
+    border-left-color: #bd2130 !important;
+    /* Borde rojo oscuro */
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.4) !important;
+    /* Shadow cromático rojo */
+    transform: translateY(-2px);
+    /* Ligera elevación para resaltar */
+    transition: all 0.3s ease;
+}
+
+/* Forzar que las letras de la tarjeta urgente cambien a blanco para mantener legibilidad */
+.tarjeta-socio-mini.tarjeta-urgente h4,
+.tarjeta-socio-mini.tarjeta-urgente p {
+    color: #ffffff !important;
+}
+
+/* Texto destacado para el conteo regresivo dentro de la tarjeta roja */
+.tarjeta-socio-mini.tarjeta-urgente .dias-urgentes {
+    color: #ffeeba !important;
+    /* Amarillo claro para que resalte sobre el fondo rojo */
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 14px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    padding-top: 6px;
+}
+
+/* --- ESTILOS DEL HISTORIAL DE PAGOS EN TARJETAS --- */
+.historial-pagos-contenedor {
+    margin-top: 12px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.historial-pagos-contenedor h5 {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Forzar que el título sea visible si la tarjeta se vuelve roja (urgente) */
+.tarjeta-urgente .historial-pagos-contenedor h5 {
+    color: #ffeeba !important;
+}
+
+.historial-scroll {
+    max-height: 80px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Personalización de la barra de scroll pequeña */
+.historial-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+.historial-scroll::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.item-pago {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    background-color: #f8f9fa;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    border: 1px solid #e9ecef;
+    color: #444 !important;
+    /* Mantener texto oscuro para legibilidad */
+}
+
+.sin-historial {
+    font-size: 11px !important;
+    color: #999 !important;
+    font-style: italic;
+}
+
+.tarjeta-urgente .sin-historial {
+    color: #ffcccc !important;
+}
